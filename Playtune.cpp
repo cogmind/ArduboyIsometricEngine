@@ -251,10 +251,10 @@
 
   -----------------------------------------------------------------------------------------*/
 
-cout << "CPP FILE";
-
 #include <Arduino.h>
 #include "Playtune.h"
+
+Serial.print ("CPP FILE");
 
 #ifndef DBUG
 #define DBUG 0          // debugging?
