@@ -21,13 +21,12 @@
 *     - Fixed include file names for Arduino 1.6 on Linux.
 */
 
-#include <iostream>
-cout << "H FILE";
-
 #ifndef Playtune_h
 #define Playtune_h
 
 #include <Arduino.h>
+
+Serial.print ("H FILE");
 
 class Playtune
 {
