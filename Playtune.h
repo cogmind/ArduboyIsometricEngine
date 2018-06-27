@@ -21,6 +21,8 @@
 *     - Fixed include file names for Arduino 1.6 on Linux.
 */
 
+cout << "H FILE";
+
 #ifndef Playtune_h
 #define Playtune_h
 
