@@ -9,7 +9,8 @@
 //
 //**************************************************
 
-#include <Playtune.h>
+//#include <Playtune.h>
+#include "Playtune.h"
 
 //------------------------------------------------
 //   scores are put in program space memory
