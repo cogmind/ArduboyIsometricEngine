@@ -252,7 +252,7 @@
   -----------------------------------------------------------------------------------------*/
 
 #include <Arduino.h>
-//#include "Playtune.h"
+#include "Playtune.h"
 
 #ifndef DBUG
 #define DBUG 0          // debugging?
