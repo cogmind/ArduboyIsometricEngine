@@ -253,7 +253,7 @@
 
 #include <Arduino.h>
 #include "Playtune.h"
-
+Serial.begin(9600);
 Serial.print ("CPP FILE");
 
 #ifndef DBUG
