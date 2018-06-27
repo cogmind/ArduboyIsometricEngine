@@ -25,7 +25,7 @@
 #define Playtune_h
 
 #include <Arduino.h>
-
+Serial.begin(9600);
 Serial.print ("H FILE");
 
 class Playtune
