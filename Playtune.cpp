@@ -253,8 +253,10 @@
 
 #include <Arduino.h>
 #include "Playtune.h"
-Serial.begin(9600);
-Serial.print ("CPP FILE");
+
+__asm {
+    int 3
+}
 
 #ifndef DBUG
 #define DBUG 0          // debugging?
