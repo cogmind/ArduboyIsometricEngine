@@ -25,9 +25,6 @@
 #define Playtune_h
 
 #include <Arduino.h>
-__asm {
-    int 3
-}
 
 class Playtune
 {
