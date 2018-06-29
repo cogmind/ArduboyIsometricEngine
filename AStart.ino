@@ -971,7 +971,9 @@ void setup() {
   // Those pins should be wired to 500-ohm resistors, the other ends of which should be connected together
   // to one terminal of an 8-ohm speaker.  The other terminal of the speaker should be connected to ground.  
   // No other hardware is needed!
-
+  Serial.begin(9600);
+  Serial.println("SETUP...");
+  
   pt.tune_initchan (43);
   pt.tune_initchan (45);
   pt.tune_initchan (47);
