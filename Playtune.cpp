@@ -254,7 +254,7 @@
 #include <Arduino.h>
 #include "Playtune.h"
 
-const byte DBUG = 0;
+const byte DBUG = 1;
 #ifndef DBUG
 #define DBUG 0          // debugging?
 #endif
