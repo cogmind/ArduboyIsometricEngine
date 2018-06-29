@@ -974,6 +974,9 @@ void setup() {
   // to one terminal of an 8-ohm speaker.  The other terminal of the speaker should be connected to ground.  
   // No other hardware is needed!
 
+  Serial.begin(9600);
+  Serial.println("Setup...");
+  
   pt.tune_initchan (43);
   pt.tune_initchan (45);
   pt.tune_initchan (47);
