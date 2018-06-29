@@ -9,7 +9,8 @@
 //
 //**************************************************
 
-#include <Arduino2.h>
+#include <Arduino.h>
+#include <Arduboy2.h>
 #include "Playtune.h"
 
 //------------------------------------------------
