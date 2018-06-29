@@ -251,12 +251,10 @@
 
   -----------------------------------------------------------------------------------------*/
 
-#include <Arduino.h>
-#include <Arduboy2.h>
 #include "Playtune.h"
 
 #ifndef DBUG
-#define DBUG 0          // debugging?
+#define DBUG 1          // debugging?
 #endif
 #define ASSUME_VOLUME 0 // assume volume information is present in bytestream files without headers?
 #define TESLA_COIL 0    // special Tesla Coil version?
