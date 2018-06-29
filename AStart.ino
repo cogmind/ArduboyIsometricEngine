@@ -488,6 +488,7 @@ const byte PROGMEM score1 [] = {
 0x93,0x37, 0x94,0x30, 20,179, 0x81, 0,89, 0x84, 0x83, 0x82, 0x80, 0xf0};
 // This score contains 10099 bytes, and 6 tone generators are used.
 
+/*
 // Playtune bytestream for file "mapleaf2.mid" created by MIDITONES V1.1 on Sat Feb 26 13:02:34 2011
 const byte PROGMEM score2 [] = {
 // Maple Leaf Rag
@@ -962,7 +963,8 @@ const byte PROGMEM score2 [] = {
 0x94,0x2C, 0x95,0x20, 1,185, 0x85, 0x81, 0x82, 0x80, 0x84, 0x83, 0xf0};
 // This score contains 10033 bytes, and 6 tone generators are used.
 // 2 notes had to be skipped.
-
+*/
+  
 Playtune pt;
 
 void setup() {
@@ -971,9 +973,7 @@ void setup() {
   // Those pins should be wired to 500-ohm resistors, the other ends of which should be connected together
   // to one terminal of an 8-ohm speaker.  The other terminal of the speaker should be connected to ground.  
   // No other hardware is needed!
-  Serial.begin(9600);
-  Serial.println("SETUP...");
-  
+
   pt.tune_initchan (43);
   pt.tune_initchan (45);
   pt.tune_initchan (47);
