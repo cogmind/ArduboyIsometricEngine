@@ -979,7 +979,7 @@ void setup() {
   pt.tune_initchan (51);
   pt.tune_initchan (53);
 
-#define DBUG 0
+#define DBUG 1
 #if DBUG
   Serial.begin(9600);
   Serial.println("Debug");
