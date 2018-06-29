@@ -994,8 +994,8 @@ void loop () {
   while (pt.tune_playing) ;   /* wait here until playing stops */
   pt.tune_delay(1000);        /* wait a second */
   
-  pt.tune_playscore (score2); /* start playing */
-  while (pt.tune_playing) ;   /* wait here until playing stops */
-  pt.tune_delay(1000);        /* wait a second */
+//  pt.tune_playscore (score2); /* start playing */
+//  while (pt.tune_playing) ;   /* wait here until playing stops */
+//  pt.tune_delay(1000);        /* wait a second */
 }
 
