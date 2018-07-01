@@ -489,7 +489,7 @@ const byte PROGMEM score1 [] = {
 // command line: midi2tones_64bit.exe -t2 LabResults-TestPolyphony 
 //
 
-const byte polyphonic PROGMEM = {
+const byte polyphony PROGMEM = {
 // ?
  0x90,77, 0,0, 0x91,53, 0x80, 0,0, 0x81, 0,0, 0x90,60, 0,0, 0x80, 0,0, 0x90,79, 0x91,117, 0,0, 0x81,
  0,0, 0x91,65, 0x90,93, 0,0, 0x80, 0,0, 0x81, 0,0, 0x90,53, 0,0, 0x80, 0,0, 0x90,81, 0x91,113, 0x91,112,
