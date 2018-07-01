@@ -1,24 +1,7 @@
-//**************************************************
-//
-// Test of playtune library for Arduino MEGA 2560
-//
-// L. Shustek, 31 Jan 2011; initial release.
-// L. Shustek, 27 Feb 2011; new score data
-// L. Shustek, 6 April 2015; change for compatibility with Arduino IDE v1.6.x
-// T. Wasiluk, 28 May 2016; moved to appropriate library examples subdirectory
-//
-//**************************************************
-
-#include <Arduino.h>
 #include <Arduboy2.h>
 #include <ArduboyTones.h>
 
 ArduboyTones sound(arduboy.audio.enabled);
-
-
-//------------------------------------------------
-//   scores are put in program space memory
-//------------------------------------------------
 
 const uint16_t bing[] PROGMEM = {
   NOTE_FS1,107, NOTE_C4,500, TONES_END
