@@ -1127,8 +1127,6 @@ void loop(){
       sound.tones(bing);              // Play a sound to indicate sound has been turned on
     }
     debounceButtons();                // Wait for button release
-}
-}
- 
-}
+    }
 
+}
