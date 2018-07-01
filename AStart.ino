@@ -1,6 +1,8 @@
 #include <Arduboy2.h>
 #include <ArduboyTones.h>
 
+// based on https://github.com/MLXXXp/FlappyBall/blob/master/FlappyBall.ino
+
 ArduboyTones sound(arduboy.audio.enabled);
 
 const uint16_t bing[] PROGMEM = {
