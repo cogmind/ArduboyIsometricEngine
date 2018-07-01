@@ -8,7 +8,7 @@ ArduboyTones sound(arduboy.audio.enabled);
 // ArduboyTones stream for file "LabResults-TestPolyphony.mid" created by MIDI2TONES V1.0.0 on Sun Jul 01 19:39:50 2018
 // command line: midi2tones_64bit.exe -o2 LabResults-TestPolyphony 
 //   From channel 0
-const uint16_t score[] PROGMEM = {
+const uint16_t polyphony PROGMEM = {
 // ?
  NOTE_F6,0, NOTE_REST,0, NOTE_REST,0, NOTE_C5,0, NOTE_REST,0, NOTE_G6,0, NOTE_G6,0, NOTE_A7,0,
  NOTE_REST,0, NOTE_REST,0, NOTE_F4,0, NOTE_REST,0, NOTE_A6,0, NOTE_F6,0, NOTE_REST,0, NOTE_C5,0,
