@@ -20,6 +20,10 @@ ArduboyTones sound(arduboy.audio.enabled);
 //   scores are put in program space memory
 //------------------------------------------------
 
+const uint16_t bing[] PROGMEM = {
+  NOTE_FS1,107, NOTE_C4,500, TONES_END
+};
+
 /*
 // Playtune bytestream for file "bach_bwv847.mid" created by MIDITONES V1.1 on Sat Feb 26 13:03:42 2011
 const byte PROGMEM score1 [] = {
@@ -1124,7 +1128,8 @@ void loop(){
       arduboy.audio.off();            // Mute sounds
     } else {
       arduboy.audio.on();             // Enable sound
-      sound.tones(bing);              // Play a sound to indicate sound has been turned on
+      //sound.tones(bing);              // Play a sound to indicate sound has been turned on
+      sound.tones(polyphony)
     }
     debounceButtons();                // Wait for button release
     }
