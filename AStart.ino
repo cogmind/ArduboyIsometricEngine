@@ -11,7 +11,10 @@
 
 #include <Arduino.h>
 #include <Arduboy2.h>
-#include "Playtune.h"
+#include <ArduboyTones.h>
+
+ArduboyTones sound(arduboy.audio.enabled);
+
 
 //------------------------------------------------
 //   scores are put in program space memory
@@ -498,6 +501,7 @@ const byte PROGMEM score1 [] = {
 // Playtune bytestream for file "LabResults-TestPolyphony.mid" created by MIDI2TONES V1.0.0 on Fri Jun 29 22:18:40 2018
 // command line: midi2tones_64bit.exe -t2 LabResults-TestPolyphony 
 //
+
 const byte polyphonic PROGMEM = {
 // ?
  0x90,77, 0,0, 0x91,53, 0x80, 0,0, 0x81, 0,0, 0x90,60, 0,0, 0x80, 0,0, 0x90,79, 0x91,117, 0,0, 0x81,
@@ -1106,41 +1110,25 @@ const byte PROGMEM score2 [] = {
 // This score contains 10033 bytes, and 6 tone generators are used.
 // 2 notes had to be skipped.
 */
-  
-Playtune pt;
-
+ 
 void setup() {
-
-  // Enable all 6 MEGA timers for notes that are output on digital pins 43, 45, 47, 49, 51, and 53.
-  // Those pins should be wired to 500-ohm resistors, the other ends of which should be connected together
-  // to one terminal of an 8-ohm speaker.  The other terminal of the speaker should be connected to ground.  
-  // No other hardware is needed!
-
-  Serial.begin(9600);
-  Serial.println("Setup...");
-  
-  pt.tune_initchan (43);
-  pt.tune_initchan (45);
-  pt.tune_initchan (47);
-  pt.tune_initchan (49);
-  pt.tune_initchan (51);
-  pt.tune_initchan (53);
-
-#define DBUG 1
-#if DBUG
-  Serial.begin(9600);
-  Serial.println("Debug");
-#endif
 }
 
-void loop () {
-  
-//  pt.tune_playscore (score1); /* start playing */
-//  while (pt.tune_playing) ;   /* wait here until playing stops */
-//  pt.tune_delay(1000);        /* wait a second */
-  
-  pt.tune_playscore (polyphonic); /* start playing */
-  while (pt.tune_playing) ;   /* wait here until playing stops */
-  pt.tune_delay(1000);        /* wait a second */
+void loop(){
+   if (!arduboy.nextFrame())
+    return;
+
+  if (arduboy.pressed(LEFT_BUTTON)) { // If the button for sound toggle is pressed
+    if (arduboy.audio.enabled()) {    // If sound is enabled
+      sound.noTone();                 // Stop anything that's playing
+      arduboy.audio.off();            // Mute sounds
+    } else {
+      arduboy.audio.on();             // Enable sound
+      sound.tones(bing);              // Play a sound to indicate sound has been turned on
+    }
+    debounceButtons();                // Wait for button release
+}
+}
+ 
 }
 
